@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0c0b12">
+<title>작은 등불 하나</title>
+<meta name="description" content="잠들기 전 3분, 고전의 등불 1화 부록 — 앞을 보지 못하는 사람의 등불(탈무드 메길라 24b): 캄캄한 밤길 걸어 보기, 흔히 아는 이야기와 원전, 오늘 밤 내가 켜 둘 작은 등불, 3분 등불">
+<style>:root{--bg:#0c0b12;--card:#16141f;--card2:#201d2c;--fg:#f1ead9;--mut:#a59c88;--line:#2f2a3d;--a:#ffb454;--ok:#7fd49a;--bad:#ff8a7a}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;line-height:1.65}
+[hidden]{display:none!important}
+.wrap{max-width:560px;margin:0 auto;padding:12px 14px 40px}
+h1{font-size:1.2rem;margin:6px 0}
+h1 small{display:block;font-size:.76rem;color:var(--mut);font-weight:400}
+.tabs{display:flex;gap:5px;margin:10px 0}
+.tabs button{flex:1;padding:9px 2px;border:1px solid var(--line);background:var(--card);color:var(--mut);border-radius:10px;font-size:.84rem;font-weight:600}
+.tabs button.on{background:#3a2a14;color:#ffe2b0;border-color:var(--a)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:10px 0}
+h2{font-size:1rem;margin:2px 0 8px}
+.q{font-family:"Noto Serif KR","Nanum Myeongjo","AppleMyungjo","Batang",serif;font-size:1.2rem;text-align:center;margin:8px 0;color:#ffe2b0;line-height:1.8}
+.note{font-size:.86rem;color:var(--mut);margin:8px 0 0}
+.note b{color:var(--fg)}
+.btn{padding:11px 14px;border-radius:12px;border:0;background:linear-gradient(135deg,#c9772a,#ffb454);color:#1b1208;font-weight:800;font-size:.95rem;flex:1}
+.btn.sec{background:var(--card2);border:1px solid var(--line);color:var(--fg);font-weight:700}
+.btn.sm{flex:none;padding:8px 12px;font-size:.84rem}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.pill{padding:7px 12px;border-radius:999px;border:1px solid var(--line);background:var(--card2);color:var(--fg);font-size:.86rem}
+.pill.on{border-color:var(--a);background:#3a2a14}
+.lbl{font-size:.82rem;color:var(--mut)}
+canvas{display:block;width:100%;border-radius:12px;background:#07060b;margin-top:8px;touch-action:pan-y}
+.say{background:#231a10;border-left:3px solid var(--a);border-radius:8px;padding:9px 11px;font-size:.92rem;margin-top:10px}
+.say b{color:#ffe2b0}
+.res{margin-top:10px;font-size:.92rem;border-radius:10px;padding:10px 12px}
+.res.g{background:#14301f;border:1px solid #2f7a52}.res.r{background:#3a1d1d;border:1px solid #8a3a3a}
+.story{min-height:150px;font-family:"Noto Serif KR","Nanum Myeongjo","AppleMyungjo","Batang",serif;font-size:1.02rem;line-height:1.95}
+.story p{margin:0 0 8px}.story .v{color:#ffe2b0}.story .t{font-family:-apple-system,"Malgun Gothic",sans-serif;font-size:.8rem;color:var(--mut)}
+.opts{display:flex;flex-direction:column;gap:6px;margin-top:4px}
+.opts button{text-align:left;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--card2);color:var(--fg);font-size:.92rem}
+.opts button.right{border-color:#7fd49a;background:#14301f}.opts button.wrong{border-color:#ff8a7a;background:#3a1d1d}
+.flow{display:flex;flex-direction:column;gap:6px}
+.flow button{text-align:left;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--card2);color:var(--fg);font-size:.9rem}
+.flow button.on{border-color:var(--a);background:#3a2a14}
+input[type=text]{flex:1;min-width:0;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:#0f0e16;color:var(--fg);font-size:.95rem}
+.tw{overflow-x:auto;border-radius:10px;border:1px solid var(--line)}
+table.df{border-collapse:collapse;width:100%;font-size:.86rem}
+table.df th,table.df td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+table.df th{color:var(--mut);font-weight:600;width:34%;background:#1b1826}
+.big{font-size:2rem;font-weight:800;text-align:center;font-variant-numeric:tabular-nums;color:#ffe2b0;margin-top:6px}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#000c;color:#fff;padding:10px 16px;border-radius:999px;font-size:.9rem;opacity:0;transition:opacity .2s;pointer-events:none;z-index:9}
+.toast.on{opacity:1}
+footer{text-align:center;color:var(--mut);font-size:.78rem;margin-top:18px}
+footer a{color:var(--mut)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>🕯️ 작은 등불 하나<small>잠들기 전 3분, 고전의 등불 1화 부록 · 앞을 보지 못하는 사람의 등불</small></h1>
+<div class="tabs">
+<button data-tab="t1" class="on">① 밤길</button>
+<button data-tab="t2">② 두 가지 읽기</button>
+<button data-tab="t3">③ 오늘 밤 등불</button>
+</div>
+
+<section id="tab-t1">
+<div class="card">
+<h2>오늘의 질문</h2>
+<p class="q">앞을 보지 못하는 사람에게,<br>등불은 무슨 소용이 있을까요?</p>
+</div>
+<div class="card">
+<h2>캄캄한 밤길</h2>
+<canvas id="ngCv"></canvas>
+<div class="row" style="margin-top:8px"><button class="btn" id="torch">🔥 횃불 들기</button><button class="btn sec" id="walk">🚶 걸어 보기</button></div>
+<div class="say" id="ngSay">횃불 없이 먼저 <b>걸어 보기</b>를 눌러 보세요. 그다음 횃불을 들고 다시 걸어 보세요.</div>
+<p class="note">앞을 보지 못하는 사람에게는 어둠과 밝음이 같습니다. 달라지는 것은 <b>다른 사람의 눈</b>입니다. 그림과 움직임은 이야기를 옮겨 앱이 만든 것입니다.</p>
+</div>
+<div class="card">
+<h2>이야기 따라 읽기</h2>
+<div class="story" id="story"></div>
+<div class="row" style="margin-top:10px"><button class="btn sec" id="sPrev">◀</button><span class="lbl" id="sNo" style="flex:1;text-align:center;margin:0">1 / 4</span><button class="btn sec" id="sNext">▶</button></div>
+</div>
+</section>
+
+<section id="tab-t2" hidden>
+<div class="card">
+<h2>흔히 아는 이야기와 원전</h2>
+<div class="row"><button class="pill on" data-rd="pop">흔히 아는 이야기</button><button class="pill" data-rd="src">원전(탈무드)</button></div>
+<canvas id="rdCv"></canvas>
+<div class="say" id="rdSay"></div>
+</div>
+<div class="card">
+<h2>원전은 무엇이라고 답했을까</h2>
+<div class="opts" id="cq">
+<button data-a="a">다른 사람이 나와 부딪히지 않도록 듭니다.</button>
+<button data-a="b">사람들이 나를 보고, 웅덩이와 가시덤불과 엉겅퀴에서 나를 건져 줍니다.</button>
+<button data-a="c">언젠가 눈을 뜨게 될 날을 기다리며 듭니다.</button>
+</div>
+<div id="cqMsg"></div>
+</div>
+<div class="card">
+<h2>원전 한눈에</h2>
+<div class="tw"><table class="df"><tbody>
+<tr><th>출처</th><td>바빌로니아 탈무드 메길라 24b</td></tr>
+<tr><th>말한 사람</th><td>랍비 요세</td></tr>
+<tr><th>마음에 걸린 구절</th><td>너는 대낮에도 더듬으리라, 눈먼 사람이 어둠 속에서 더듬듯이 (신명기 28장 29절)</td></tr>
+<tr><th>불</th><td>횃불</td></tr>
+<tr><th>건져 주는 곳</th><td>웅덩이 · 가시덤불 · 엉겅퀴</td></tr>
+</tbody></table></div>
+<p class="note">문장은 영상 대본의 우리말을 따랐고, 오디오북의 문장이나 음원은 쓰지 않았습니다.</p>
+</div>
+</section>
+
+<section id="tab-t3" hidden>
+<div class="card">
+<h2>오늘 밤, 내가 켜 두어야 할 작은 등불</h2>
+<p class="note" style="margin-top:0">혼자 견디는 것만이 강한 것은 아닙니다. 어둠 속에서 <b>내가 여기 있다</b>고 작은 불을 켜 두어야 누군가 손을 내밀 수 있습니다.</p>
+<div class="flow" id="lamps">
+<button data-l="0">💬 "요즘 좀 힘들어"라고 한 줄 말하기</button>
+<button data-l="1">📱 오래 연락 못 한 사람에게 안부</button>
+<button data-l="2">🙋 내일 도움을 한 가지 부탁하기</button>
+<button data-l="3">✍️ 오늘 마음을 한 줄 적어 두기</button>
+</div>
+<div class="row" style="margin-top:8px"><input type="text" id="myLamp" maxlength="30" placeholder="나만의 등불 (선택)"></div>
+<div class="say" id="lpSay">하나를 고르거나 직접 적어 보세요. 저장하거나 보내지 않습니다.</div>
+</div>
+<div class="card">
+<h2>3분 등불</h2>
+<canvas id="cdCv"></canvas>
+<div class="big" id="cdT">3:00</div>
+<div class="row" style="margin-top:8px"><button class="btn" id="cdGo">🕯️ 불 켜 두기</button><button class="btn sec sm" id="cdStop">끄기</button></div>
+<p class="note">3분 동안 등불이 조용히 타다가 천천히 잦아듭니다. 소리는 없고, 화면 밝기는 낮게 그렸습니다. 혼자 오래 버거우셨다면, 가까운 사람이나 상담 전문가에게 등불을 보여 주셔도 괜찮습니다.</p>
+</div>
+</section>
+
+<footer>© 2026 정필 수심명 · <a href="https://blog.naver.com/omyman" target="_blank" rel="noopener">blog.naver.com/omyman</a><br>고전의 등불 1화 부록 · 원전: 바빌로니아 탈무드 메길라 24b · 인터넷 없이 동작 · 아무것도 저장하지 않음</footer>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+(()=>{
+'use strict';
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+function toast(t){const el=$('#toast');el.textContent=t;el.classList.add('on');clearTimeout(toast.t);toast.t=setTimeout(()=>el.classList.remove('on'),1800);}
+let touched=false;document.addEventListener('pointerdown',()=>{touched=true;},{once:true,capture:true});
+const vib=n=>{if(!touched)return;try{navigator.vibrate&&navigator.vibrate(n);}catch(e){}};
+function prep(cv,ratio){const dpr=Math.min(2,window.devicePixelRatio||1),w=cv.clientWidth||320,h=Math.round(w*ratio);
+  cv.width=w*dpr;cv.height=h*dpr;cv.style.height=h+'px';const c=cv.getContext('2d');c.setTransform(dpr,0,0,dpr,0,0);return{c,w,h};}
+function T(c,s,x,y,col,size,al,bl,wt){c.fillStyle=col;c.font=`${wt||''} ${size||12}px -apple-system,"Malgun Gothic",sans-serif`;c.textAlign=al||'center';c.textBaseline=bl||'middle';c.fillText(s,x,y);}
+function single(sel,attr,fn){$$(sel).forEach(b=>b.onclick=()=>{$$(sel).forEach(x=>x.classList.toggle('on',x===b));vib(8);fn(b.dataset[attr]);});}
+function rr(c,x,y,w,h,r){r=Math.min(r,Math.abs(w)/2,Math.abs(h)/2);c.beginPath();c.moveTo(x+r,y);c.arcTo(x+w,y,x+w,y+h,r);c.arcTo(x+w,y+h,x,y+h,r);c.arcTo(x,y+h,x,y,r);c.arcTo(x,y,x+w,y,r);c.closePath();}
+
+const AM='#ffb454',MU='#a59c88',FG='#f1ead9',BADC='#ff8a7a',OKC='#7fd49a';
+function quiz(id,ans,fn){$$(`#${id} button`).forEach(b=>b.onclick=()=>{const ok=b.dataset.a===ans;$$(`#${id} button`).forEach(x=>x.className=x.dataset.a===ans?'right':x===b?'wrong':'');vib(ok?[30,40,60]:80);$(`#${id}Msg`).innerHTML=fn(ok);});}
+function person(c,x,y,s,col,alpha){c.globalAlpha=alpha;c.fillStyle=col;c.beginPath();c.arc(x,y-s*1.55,s*.42,0,7);c.fill();rr(c,x-s*.38,y-s*1.1,s*.76,s*1.1,s*.3);c.fill();c.fillRect(x-s*.3,y-.05*s,s*.22,s*.55);c.fillRect(x+s*.08,y-.05*s,s*.22,s*.55);c.globalAlpha=1;}
+
+/* ---------- ① 밤길 ---------- */
+const HZ=[{p:.3,n:'웅덩이'},{p:.56,n:'가시덤불'},{p:.8,n:'엉겅퀴'}];
+let torch=false,anim=null,tt=0,stumble=[];
+function hazard(c,k,x,y,a){c.globalAlpha=a;if(k===0){c.fillStyle='#1f3550';c.beginPath();c.ellipse(x,y+6,22,6,0,0,7);c.fill();}
+  else{c.strokeStyle=k===1?'#4f6b3a':'#7a5a8a';c.lineWidth=1.6;for(let i=0;i<7;i++){const a2=-Math.PI/2+(i-3)*.32;c.beginPath();c.moveTo(x,y+8);c.lineTo(x+Math.cos(a2)*16,y+8+Math.sin(a2)*18);c.stroke();}if(k===2){c.fillStyle='#b07acc';[-6,0,6].forEach(d=>{c.beginPath();c.arc(x+d,y-8+Math.abs(d)*.6,3,0,7);c.fill();});}}c.globalAlpha=1;}
+function ngDraw(){const{c,w,h}=prep($('#ngCv'),.62);c.fillStyle='#07060b';c.fillRect(0,0,w,h);
+  for(let i=0;i<40;i++){const sx=(i*97.3)%w,sy=(i*53.7)%(h*.35);c.fillStyle='rgba(255,255,255,'+(.15+(i%5)*.07)+')';c.fillRect(sx,sy,1.3,1.3);}
+  const L=24,R=w-24,py=h*.66,X=p=>L+(R-L)*p;
+  c.fillStyle='#14121c';c.fillRect(0,py+10,w,16);
+  let wx=X(tt),wy=py;let near=-1;
+  HZ.forEach((z,k)=>{const d=tt-z.p;if(Math.abs(d)<.07)near=k;});
+  if(torch&&near>=0){const d=(tt-HZ[near].p)/.07;wy=py-26*Math.cos(d*Math.PI/2);}
+  if(!torch&&near>=0&&Math.abs(tt-HZ[near].p)<.025)wy=py+Math.sin(tt*400)*3;
+  // light
+  if(torch){const g=c.createRadialGradient(wx,wy-30,5,wx,wy-30,110);g.addColorStop(0,'rgba(255,180,84,.55)');g.addColorStop(1,'rgba(255,180,84,0)');c.fillStyle=g;c.fillRect(0,0,w,h);}
+  HZ.forEach((z,k)=>{const hx=X(z.p),lit=torch&&Math.abs(hx-wx)<110;hazard(c,k,hx,py,lit?1:.18);if(lit||!anim)T(c,z.n,hx,py+34,lit?FG:'#4a4458',10);});
+  // passersby
+  HZ.forEach((z,k)=>{const hx=X(z.p)+18,hy=py-56+(k%2)*8;let px=hx,py2=hy,a=.22;
+    if(torch&&anim){const d=Math.abs(tt-z.p);if(d<.12){a=1;const f=1-d/.12;px=hx+(wx+12-hx)*f*.8;py2=hy+(wy-12-hy)*f*.8;}else a=.55;}
+    else if(!torch&&anim){px=hx-((tt*900+k*120)%(R-L))*.0+((tt*160+k*60)%60)-30;}
+    person(c,px,py2+18,12,torch?'#d7c6a6':'#3c3748',a);
+    if(torch&&anim&&Math.abs(tt-z.p)<.08){c.strokeStyle=OKC;c.lineWidth=2;c.beginPath();c.moveTo(px+4,py2+4);c.lineTo(wx-4,wy-18);c.stroke();}});
+  person(c,wx,wy+8,15,torch?'#f1ead9':'#6a637a',1);
+  if(torch){const fx=wx+12,fy=wy-34;c.strokeStyle='#8a6a40';c.lineWidth=3;c.beginPath();c.moveTo(wx+6,wy-12);c.lineTo(fx,fy);c.stroke();
+    const fl=1+Math.sin(performance.now()/90)*.15;c.fillStyle='#ffcf7a';c.beginPath();c.ellipse(fx,fy-6,4*fl,9*fl,0,0,7);c.fill();c.fillStyle='#fff3d0';c.beginPath();c.ellipse(fx,fy-4,2,4,0,0,7);c.fill();}
+  T(c,torch?'🔥 횃불을 든 밤':'🌑 칠흑같이 캄캄한 밤',12,14,torch?AM:MU,11,'left');
+  if(stumble.length)T(c,'걸려 넘어진 곳: '+stumble.join(' · '),w-12,14,BADC,10.5,'right');}
+function walk(){if(anim)return;stumble=[];tt=0;const t0=performance.now(),D=7000;let hit=new Set();
+  $('#ngSay').innerHTML=torch?'횃불을 들고 걷습니다…':'횃불 없이 걷습니다…';
+  const step=now=>{tt=Math.min(1,(now-t0)/D);HZ.forEach((z,k)=>{if(!torch&&!hit.has(k)&&tt>=z.p){hit.add(k);stumble.push(z.n);vib(60);}if(torch&&!hit.has(k)&&tt>=z.p-.06){hit.add(k);vib(15);}});ngDraw();
+    if(tt<1)anim=requestAnimationFrame(step);else{anim=null;ngDraw();
+      $('#ngSay').innerHTML=torch?'<b>"이 불이 내 손에 있는 동안은, 사람들이 나를 봅니다. 그리고 웅덩이와 가시덤불과 엉겅퀴에서 나를 건져 줍니다."</b> 앞을 못 보는 그에게는 불빛이 달라지지 않았습니다. 달라진 것은 <b>그를 볼 수 있게 된 사람들</b>입니다.':`어둠 속에서는 아무도 그를 보지 못했습니다. <b>${stumble.join(', ')}</b>에 걸렸지만 지나가던 사람들은 그가 거기 있는 줄도 몰랐습니다. 이제 <b>횃불 들기</b>를 누르고 다시 걸어 보세요.`;}};
+  anim=requestAnimationFrame(step);}
+$('#walk').onclick=walk;
+$('#torch').onclick=()=>{if(anim)return;torch=!torch;stumble=[];tt=0;$('#torch').textContent=torch?'🌑 횃불 내려놓기':'🔥 횃불 들기';vib(10);ngDraw();
+  $('#ngSay').innerHTML=torch?'횃불을 들었습니다. 이제 <b>걸어 보기</b>를 눌러 보세요.':'횃불을 내려놓았습니다.';};
+let flick=null;function flickLoop(){if(!$('#tab-t1').hidden&&torch&&!anim)ngDraw();flick=setTimeout(flickLoop,120);}
+const ST=[['랍비 요세의 오랜 의문',['랍비 요세는 평생 한 구절이 마음에 걸렸다고 합니다.','<span class="v">너는 대낮에도 더듬으리라, 눈먼 사람이 어둠 속에서 더듬듯이.</span>','앞을 보지 못하는 사람에게 어둠과 밝음이 무슨 차이가 있기에, 굳이 어둠 속에서라고 했을까.']],
+['캄캄한 밤길',['그러던 어느 날, 칠흑같이 캄캄한 밤이었습니다.','길을 가던 랍비 요세는, 앞을 보지 못하는 한 사람이 손에 횃불을 들고 걸어오는 것을 보았습니다.','랍비가 물었습니다. <span class="v">여보게, 그 불은 무엇에 쓰려고 들고 다니는가?</span>']],
+['그 사람의 대답',['그 사람이 대답했습니다.','<span class="v">이 불이 내 손에 있는 동안은, 사람들이 나를 봅니다. 그리고 웅덩이와 가시덤불과 엉겅퀴에서 나를 건져 줍니다.</span>','그제야 랍비 요세는 그 구절을 이해했다고 합니다.']],
+['오늘의 사유',['혼자 견디는 것만이 강한 것은 아닙니다.','어둠 속에서 내가 여기 있다고 작은 불을 켜 두는 것. 그래야 누군가 손을 내밀 수 있습니다.','오늘 밤, 내가 켜 두어야 할 작은 등불은 무엇인지 한 번 떠올려 보시면 좋겠습니다.']]];
+let sp=0;function stDraw(){const s=ST[sp];$('#story').innerHTML=`<p class="t">${s[0]}</p>`+s[1].map(x=>`<p>${x}</p>`).join('');$('#sNo').textContent=`${sp+1} / ${ST.length}`;}
+$('#sPrev').onclick=()=>{sp=(sp+ST.length-1)%ST.length;stDraw();vib(6);};$('#sNext').onclick=()=>{sp=(sp+1)%ST.length;stDraw();vib(6);};
+
+/* ---------- ② 두 가지 읽기 ---------- */
+let rd='pop';
+function rdDraw(){const{c,w,h}=prep($('#rdCv'),.56);c.fillStyle='#07060b';c.fillRect(0,0,w,h);const cx=w/2,cy=h*.56;
+  const g=c.createRadialGradient(cx,cy-30,4,cx,cy-30,90);g.addColorStop(0,'rgba(255,180,84,.45)');g.addColorStop(1,'rgba(255,180,84,0)');c.fillStyle=g;c.fillRect(0,0,w,h);
+  person(c,cx,cy+10,16,FG,1);c.fillStyle='#ffcf7a';c.beginPath();c.ellipse(cx+14,cy-40,4,9,0,0,7);c.fill();
+  const P=[[w*.13,cy-30],[w*.87,cy-30],[w*.2,cy+40],[w*.8,cy+40]];
+  P.forEach(([x,y])=>{person(c,x,y+14,11,'#8e86a0',1);
+    const a=rd==='pop'?[cx,cy-20,x,y-10]:[x,y-10,cx,cy-20],col=rd==='pop'?AM:OKC;const[x0,y0,x1,y1]=a,dx=x1-x0,dy=y1-y0,l=Math.hypot(dx,dy),ux=dx/l,uy=dy/l;
+    const sx=x0+ux*26,sy=y0+uy*26,ex=x1-ux*24,ey=y1-uy*24;c.strokeStyle=col;c.lineWidth=2;c.setLineDash([5,4]);c.beginPath();c.moveTo(sx,sy);c.lineTo(ex,ey);c.stroke();c.setLineDash([]);
+    const an=Math.atan2(uy,ux);c.fillStyle=col;c.beginPath();c.moveTo(ex,ey);c.lineTo(ex-9*Math.cos(an-.45),ey-9*Math.sin(an-.45));c.lineTo(ex-9*Math.cos(an+.45),ey-9*Math.sin(an+.45));c.closePath();c.fill();});
+  T(c,rd==='pop'?'불빛 → 남에게: "나와 부딪히지 마세요"':'남의 눈 → 나에게: "그가 저기 있다, 도와주자"',w/2,16,rd==='pop'?AM:OKC,11.5,'center','middle','700');
+  $('#rdSay').innerHTML=rd==='pop'?'흔히는 <b>남이 나와 부딪히지 않도록</b> 등불을 든다는 <b>배려</b>의 이야기로 전해집니다. 화살표가 나에게서 <b>밖으로</b> 향합니다.':'원전의 대답은 조금 다릅니다. <b>사람들이 나를 보고, 나를 도와줄 수 있도록</b> 듭니다. 화살표가 사람들에게서 <b>나에게로</b> 향합니다. 혼자 견디는 대신, 도움이 닿을 수 있게 <b>나를 보이게</b> 하는 불입니다.';}
+single('[data-rd]','rd',v=>{rd=v;rdDraw();});
+quiz('cq','b',ok=>`<div class="res ${ok?'g':'r'}">${ok?'맞습니다.':'원전의 대답은 이렇습니다.'} "이 불이 내 손에 있는 동안은, <b>사람들이 나를 봅니다</b>. 그리고 웅덩이와 가시덤불과 엉겅퀴에서 <b>나를 건져 줍니다</b>." ①번은 흔히 전해지는 배려의 이야기에 가깝습니다.</div>`);
+
+/* ---------- ③ 오늘 밤 등불 ---------- */
+const LP=['오늘 밤 누군가에게 <b>"요즘 좀 힘들어"</b> 한 줄을 보내는 것. 어둠 속에서 "내가 여기 있다"고 알리는 가장 작은 불입니다.','오래 연락 못 한 사람에게 <b>안부</b> 한 줄. 내 불을 켜면 상대에게도 길이 보입니다.','내일 <b>도움을 한 가지</b> 부탁해 보기. 손을 내밀 수 있게 하는 것은 내 쪽의 불빛입니다.','오늘 마음을 <b>한 줄</b> 적어 두기. 나 자신에게 먼저 켜 두는 등불입니다.'];
+single('#lamps button','l',v=>$('#lpSay').innerHTML=LP[+v]+' (저장하지 않습니다)');
+$('#myLamp').oninput=e=>{const v=e.target.value.trim();$$('#lamps button').forEach(x=>x.classList.remove('on'));$('#lpSay').innerHTML=v?`🕯️ 오늘 밤의 등불: <b>${v.replace(/[&<>"]/g,'')}</b> — 켜 두기만 해도, 누군가 손을 내밀 수 있습니다.`:'하나를 고르거나 직접 적어 보세요. 저장하거나 보내지 않습니다.';};
+let cd=null,cdEnd=0,cdRaf=null;const CDT=180000;
+function cdDraw(){const{c,w,h}=prep($('#cdCv'),.6);c.fillStyle='#07060b';c.fillRect(0,0,w,h);
+  const left=cd?Math.max(0,cdEnd-Date.now()):CDT,f=left/CDT,life=cd?Math.min(1,f/.17+.0):1,cx=w/2,base=h*.86,ch=h*.34+h*.12*f;
+  const lit=cd?left>0:false;
+  if(lit||!cd){const g=c.createRadialGradient(cx,base-ch-20,4,cx,base-ch-20,h*.55*(cd?Math.max(.25,life):.6));g.addColorStop(0,`rgba(255,180,84,${cd?.4*Math.max(.3,life):.18})`);g.addColorStop(1,'rgba(255,180,84,0)');c.fillStyle=g;c.fillRect(0,0,w,h);}
+  c.fillStyle='#e9dfc9';rr(c,cx-18,base-ch,36,ch,5);c.fill();c.fillStyle='#d2c6ad';c.fillRect(cx-18,base-ch+6,36,3);
+  c.fillStyle='#2a2433';c.fillRect(cx-1.2,base-ch-8,2.4,9);
+  if(lit||!cd){const t=performance.now()/1000,s=(cd?Math.max(.35,life):.8)*(1+.08*Math.sin(t*9)+.05*Math.sin(t*23)),fx=cx+Math.sin(t*3)*1.5;
+    c.fillStyle='rgba(255,160,60,.9)';c.beginPath();c.ellipse(fx,base-ch-18*s,8*s,18*s,0,0,7);c.fill();c.fillStyle='#ffe9b8';c.beginPath();c.ellipse(fx,base-ch-14*s,3.5*s,8*s,0,0,7);c.fill();}
+  else{c.strokeStyle='rgba(200,200,210,.35)';c.lineWidth=1.5;c.beginPath();const t=performance.now()/600;c.moveTo(cx,base-ch-8);c.bezierCurveTo(cx+8*Math.sin(t),base-ch-30,cx-8,base-ch-50,cx+4*Math.sin(t*1.3),base-ch-80);c.stroke();T(c,'잘 자요, 오늘 켠 등불은 내일도 거기 있습니다.',cx,22,MU,11);}
+  c.fillStyle='#2a2433';rr(c,cx-40,base,80,8,4);c.fill();
+  const m=Math.floor(left/60000),s2=Math.floor(left/1000)%60;$('#cdT').textContent=`${m}:${String(s2).padStart(2,'0')}`;}
+function cdLoop(){cdDraw();if(cd&&Date.now()<cdEnd+4000)cdRaf=requestAnimationFrame(cdLoop);else if(cd){cd=null;$('#cdGo').textContent='🕯️ 불 켜 두기';}}
+$('#cdGo').onclick=()=>{if(cd)return;cd=1;cdEnd=Date.now()+CDT;$('#cdGo').textContent='🕯️ 타는 중…';vib(10);cancelAnimationFrame(cdRaf);cdLoop();};
+$('#cdStop').onclick=()=>{cd=null;cancelAnimationFrame(cdRaf);$('#cdGo').textContent='🕯️ 불 켜 두기';cdDraw();};
+
+/* ---------- 공통 ---------- */
+function redraw(){if(!$('#tab-t1').hidden)ngDraw();if(!$('#tab-t2').hidden)rdDraw();if(!$('#tab-t3').hidden&&!cd)cdDraw();}
+function show(t){$$('.tabs button').forEach(x=>x.classList.toggle('on',x.dataset.tab===t));['t1','t2','t3'].forEach(k=>$('#tab-'+k).hidden=k!==t);redraw();window.scrollTo(0,0);}
+$$('.tabs button').forEach(b=>b.onclick=()=>show(b.dataset.tab));
+let rz;window.addEventListener('resize',()=>{clearTimeout(rz);rz=setTimeout(redraw,120);});
+stDraw();redraw();flickLoop();
+
+})();
+</script>
+</body>
+</html>
